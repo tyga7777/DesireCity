@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @desire.user_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @desire.title %>
+</p>
+
+<p>
+  <strong>Todo:</strong>
+  <%= @desire.todo %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @desire.status %>
+</p>
+
+<%= link_to 'Edit', edit_desire_path(@desire) %> |
+<%= link_to 'Back', desires_path %>
