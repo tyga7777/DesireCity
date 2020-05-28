@@ -1,4 +1,5 @@
 class DesiresController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_desire, only: [:show, :edit, :update, :destroy]
 
   # GET /desires
