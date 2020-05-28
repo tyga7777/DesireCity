@@ -5,7 +5,6 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
       <th>Title</th>
       <th>Todo</th>
       <th>Status</th>
@@ -16,7 +15,6 @@
   <tbody>
     <% @desires.each do |desire| %>
       <tr>
-        <td><%= desire.user_id %></td>
         <td><%= desire.title %></td>
         <td><%= desire.todo %></td>
         <td><%= desire.status %></td>

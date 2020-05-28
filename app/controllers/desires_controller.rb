@@ -5,7 +5,7 @@ class DesiresController < ApplicationController
   # GET /desires
   # GET /desires.json
   def index
-    @desires = Desire.all
+    @desires = current_user.desires
   end
 
   # GET /desires/1
@@ -26,7 +26,7 @@ class DesiresController < ApplicationController
   # POST /desires.json
   def create
     @desire = Desire.new(desire_params)
-
+    @desire.user_id = current_user.id
     respond_to do |format|
       if @desire.save
         format.html { redirect_to @desire, notice: 'Desire was successfully created.' }
@@ -65,7 +65,7 @@ class DesiresController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_desire
-      @desire = Desire.find(params[:id])
+      @desire = current_user.desires.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
