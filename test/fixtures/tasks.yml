@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  desire_id: 1
+  target_date: 2020-06-23
+  title: MyString
+  detail: MyText
+  status: 1
+
+two:
+  user_id: 1
+  desire_id: 1
+  target_date: 2020-06-23
+  title: MyString
+  detail: MyText
+  status: 1

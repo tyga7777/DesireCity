@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200524135025) do
+ActiveRecord::Schema.define(version: 20200623142658) do
 
   create_table "desires", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
@@ -19,6 +19,19 @@ ActiveRecord::Schema.define(version: 20200524135025) do
     t.integer  "status"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+  end
+
+  create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "user_id",                   null: false
+    t.integer  "desire_id",                 null: false
+    t.date     "target_date",               null: false
+    t.string   "title",                     null: false
+    t.text     "detail",      limit: 65535
+    t.integer  "status",                    null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+    t.index ["desire_id"], name: "index_tasks_on_desire_id", using: :btree
+    t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
