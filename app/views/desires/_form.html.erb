@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :status %>
-    <%= f.number_field :status %>
+    <%= f.select :status, Desire.statuses.keys.to_a, {} %>  
   </div>
 
   <div class="actions">

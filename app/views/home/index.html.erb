@@ -1,0 +1,8 @@
+<br />
+<h1>今日やること</h1>
+<br />
+<% unless @has_desires %>
+  <br />
+  <%= link_to 'まずはDesireを作成しましょう', desires_path, class: 'btn btn-success' %>
+<% end %>
+
