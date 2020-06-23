@@ -27,3 +27,7 @@ header {
 footer {
   height: 60px;
 }
+
+body {
+  background: radial-gradient(#e6b422, #fef263, #f8e58c) !important;
+}
