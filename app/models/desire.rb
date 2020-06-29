@@ -1,5 +1,6 @@
 class Desire < ApplicationRecord
   belongs_to :user
+  has_many :tasks
   
   enum status: {
     in_progress: 1,
