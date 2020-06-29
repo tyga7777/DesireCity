@@ -6,3 +6,34 @@
   <%= link_to 'まずはDesireを作成しましょう', desires_path, class: 'btn btn-success' %>
 <% end %>
 
+<% if @has_desires %>
+  <% if @today_tasks.exists? %>
+    <table class='table'>
+      <thead>
+        <tr>
+          <th>Desire</th>
+          <th>Title</th>
+          <th>Detail</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @today_tasks.each do |task| %>
+          <tr>
+            <td><%= link_to task.desire.title, edit_desire_path(task.desire) %></td>
+            <td><%= link_to task.title, edit_task_path(task) %></td>
+            <td><%= task.detail %></td>
+            <td><%= task.status %></td>
+            <td>
+              <div><%= link_to 'Done', done_task_path(task), method: 'patch', class: 'btn btn-info' %></div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table> 
+  <% end %>
+  <br />
+  <%= link_to '今日のTaskを追加', new_task_path, class: 'btn btn-success' %>
+<% end %>
