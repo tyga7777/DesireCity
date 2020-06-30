@@ -1,11 +1,6 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @task.user_id %>
-</p>
-
-<p>
   <strong>Desire:</strong>
   <%= @task.desire_id %>
 </p>
@@ -23,11 +18,6 @@
 <p>
   <strong>Detail:</strong>
   <%= @task.detail %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @task.status %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

@@ -12,18 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %>
-    <%= f.number_field :user_id %>
-  </div>
-
-  <div class="field">
     <%= f.label :desire_id %>
-    <%= f.number_field :desire_id %>
-  </div>
-
-  <div class="field">
-    <%= f.label :target_date %>
-    <%= f.date_select :target_date %>
+    <%= f.collection_select :desire_id, current_user.desires.in_progress.all, :id, :title %>
   </div>
 
   <div class="field">
@@ -34,11 +24,6 @@
   <div class="field">
     <%= f.label :detail %>
     <%= f.text_area :detail %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %>
-    <%= f.number_field :status %>
   </div>
 
   <div class="actions">
