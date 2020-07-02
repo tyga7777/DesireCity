@@ -1,11 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
-    <a class="navbar-brand" href="#">DesireCity</a>
+    <%= link_to 'DesireCity', root_path, class: 'navbar-brand' %>
     <div class="collapse navbar-collapse" id="navbarText">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item <%= (controller.controller_name == 'home') ? 'active' : '' %>">
-          <%= link_to 'Home', root_path, class: 'nav-link' %>
-        </li>
         <li class="nav-item <%= (controller.controller_name == 'desires') ? 'active' : '' %>">
           <%= link_to 'Desires', desires_path, class: 'nav-link' %>
         </li>
