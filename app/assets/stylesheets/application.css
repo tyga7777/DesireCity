@@ -30,4 +30,13 @@ footer {
 
 body {
   background: radial-gradient(#460e44, #65318e, #9079ad) !important;
+  font-family: 'SkipStd';
 }
+
+@font-face {
+  font-family: 'SkipStd';
+  src: font-url('FOT-SkipStd-D.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
