@@ -34,9 +34,12 @@ body {
 }
 
 @font-face {
-  font-family: 'SkipStd';
-  src: font-url('FOT-SkipStd-D.otf') format('truetype');
+  font-family: 'Bluesky';
+  src: font-url('custom-Bluesky-webfont.otf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
+.navbar-brand {
+  font-family: 'Bluesky';
+}
